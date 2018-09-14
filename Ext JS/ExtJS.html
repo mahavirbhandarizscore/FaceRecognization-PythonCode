@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" 
+         rel = "stylesheet" />
+      <script type = "text/javascript" 
+         src = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+      
+      <script type = "text/javascript">
+         Ext.onReady(function() {
+            Ext.create('Ext.form.Panel', {
+               renderTo: 'formId',
+               border: true,
+			   margin:'30 30 30 30',
+			   style:'background-color:#f6f6f6 !important;',
+               title:"Face Recognization Data",
+               width: 500,
+               height:280,
+               
+               items: [{
+                  xtype: 'textfield',
+                  margin:'30 5 5 10',
+                  labelWidth: 100,
+                  fieldLabel: 'User ID',
+                  allowBlank: false,
+                  style:'font-size:12px;webkit-text-fill-color: #333;'
+               },
+                {
+                  xtype: 'textfield',
+                  margin:'10 5 5 10',
+                  labelWidth: 100,
+                  fieldLabel: 'First Name',
+                  allowBlank: false,
+                  style:'font-size:12px;webkit-text-fill-color: #333;'
+               },{
+                  xtype: 'textfield',
+                  margin:'10 5 5 10',
+                  labelWidth: 100,
+                  fieldLabel: 'Last Name',
+                  allowBlank: false,
+                  style:'font-size:12px;webkit-text-fill-color: #333;'
+               },{
+                  xtype: 'textfield',
+                  margin:'10 5 5 10',
+                  labelWidth: 100,
+                  fieldLabel: 'Email Id',
+                  allowBlank: false,
+                  style:'font-size:12px;webkit-text-fill-color: #333;'
+               },
+               {
+                  xtype: 'filefield',
+                  fieldLabel: 'Photo Upload',
+                  labelWidth: 100,
+                  margin:'10 5 5 10',
+                  msgTarget: 'side',
+                  allowBlank: false,
+                  anchor: '100%',
+                  buttonText: 'Select Photo'
+               },
+               {
+                  xtype: 'button',
+                  margin:'10 5 5 215',
+                  text: 'Submit'
+               },
+               ]
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <div id = "formId"></div>
+   </body>
+</html>
